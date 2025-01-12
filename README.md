@@ -1,22 +1,21 @@
 # tomcat_9_catalina_base_configuration_7
 
-Se expone un java MBean en tomcat.
+Se expone un java Bean en tomcat.
 
-Código del MBean :
-proyecto de MBean con su código fuente y build de Ant : ./source_code/mymbean/
+Código del bean :
+proyecto de bean con su código fuente y build de Ant : ./source_code/mybean/
 
-Compilar y desplegar el jar del MBean se hace con : ./compileanddeploy.bat
+Compilar y desplegar el jar del bean se hace con : ./compileanddeploy.bat
 (ant clean compile jar + copiar el jar en la carpeta lib/ de CATALINA_BASE)
 
-Se puede ver que se desplegó en el tomcat un MBean por esa url :
+Se puede ver que se desplegó en el tomcat un bean por esa url :
 http://localhost:8080/manager/text/resources?type=com.mycompany.packageofmybean.MyBean
-
 
 devuelve : OK - Listados recursos globales de tipo [com.mycompany.packageofmybean.MyBean]
 bean/MyBeanFactory:com.mycompany.packageofmybean.MyBean
 
 
-En el server.xml, en la etiqueta <GlobalNamingResources>, se declara :
+---------- CATALINA_BASE/conf/server.xml, en la etiqueta <GlobalNamingResources>, se declara :
 <Resource name="bean/MyBeanFactory" auth="Container"
 	type="com.mycompany.packageofmybean.MyBean"
 	factory="org.apache.naming.factory.BeanFactory"

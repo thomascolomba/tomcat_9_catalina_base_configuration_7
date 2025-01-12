@@ -1,0 +1,6 @@
+127.0.0.1 - - [12/Jan/2025:15:31:45 +0100] "GET /manager/ HTTP/1.1" 302 -
+127.0.0.1 - - [12/Jan/2025:15:31:46 +0100] "GET /manager/html HTTP/1.1" 401 2562
+127.0.0.1 - tomcat_7 [12/Jan/2025:15:31:51 +0100] "GET /manager/html HTTP/1.1" 200 18028
+127.0.0.1 - - [12/Jan/2025:15:31:52 +0100] "GET /manager/css/manager.css HTTP/1.1" 200 2946
+127.0.0.1 - tomcat_7 [12/Jan/2025:15:32:08 +0100] "GET /manager/text/resources HTTP/1.1" 200 179
+127.0.0.1 - tomcat_7 [12/Jan/2025:15:32:55 +0100] "GET /manager/text/resources?type=com.mycompany.packageofmybean.MyBean HTTP/1.1" 200 148
